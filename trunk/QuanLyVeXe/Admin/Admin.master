@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>QUẢN LÝ CÔNG TY PHƯƠNG TRANG</title>
+    <link href="tara/coda-slider.css" rel="stylesheet" type="text/css" />
+    <link href="tara/style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    <div id="slider">
+	<a href="../Default.aspx" style="font-weight:bold" target="_blank">HOME INDEX</a>
+    <div id="sidebar">
+    	<div id="header">
+        	<img src="tara/logo.png">
+        </div> <!-- end of header -->
+        
+        <ul class="navigation">
+            <li><a class="selected" href="Default.aspx">Home<span class="ui_icon home"></span></a></li>
+            <li><a class="" href="VeXe.aspx">Quản lý vé xe<span class="ui_icon aboutus"></span></a></li>
+            <li><a class="" href="Tuyendi.aspx">Quản lý tuyến đi<span class="ui_icon gallery"></span></a></li>
+            <li><a class="" href="Acountkhachhang.aspx">Quản lý tài khoản KH<span class="ui_icon services"></span></a></li>
+            <li><a class="" href="Lienhe.aspx">Quản lý liên hệ<span class="ui_icon contactus"></span></a></li>
+        </ul>
+    </div> <!-- end of sidebar -->
+
+	<div id="main">
+    	
+        <div id="content">
+            <asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div> <!-- end of content -->
+        
+
+
+
+
+
+        <div id="footer">
+      
+        </div> <!-- end of footer -->
+    
+    </div> <!-- end of main -->
+</div>
+    </form>
+</body>
+</html>

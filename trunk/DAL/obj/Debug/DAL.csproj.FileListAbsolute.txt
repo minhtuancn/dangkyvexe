@@ -1,0 +1,7 @@
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\bin\Debug\DAL.dll
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\bin\Debug\DAL.pdb
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\bin\Debug\BLL.dll
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\bin\Debug\BLL.pdb
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\obj\Debug\DAL.dll
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\DAL\obj\Debug\DAL.pdb

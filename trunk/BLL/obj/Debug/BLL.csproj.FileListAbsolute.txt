@@ -1,0 +1,4 @@
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\BLL\bin\Debug\BLL.dll
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\BLL\bin\Debug\BLL.pdb
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\BLL\obj\Debug\BLL.dll
+I:\[PHAN TICH THIET KE HDT]\QuanLyDKVeXe\BLL\obj\Debug\BLL.pdb
