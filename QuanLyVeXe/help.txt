@@ -1,0 +1,54 @@
+﻿CSDL
+
+varchar(50). Kieu ky tu ko dau
+
+
+Đầu tiên
+Lấy thư viện trong lib/MSCaptcha.dll để kéo Control Captcha vào 
+Thêm dòng lệnh vào file Config la 
+ <!--Phan httpHandlers de hien MaCapcha len-->
+      <httpHandlers>
+        <add verb="GET" path="CaptchaImage.axd" type="MSCaptcha.CaptchaImageHandler, MSCaptcha"/>
+      </httpHandlers>
+
+
++Global.asax
+Ghi lỗi khi web xảy ra
+Oops thêm cả file trong config
+
+.Admin
+Sư dụng Panel để nhắn vào Button thực hiện các chức nằng sao cho Panel ẩn đi và hiện lên
+
++ Thêm lớp Link trong DataAccess (Trang 24 trong Baloon)
+Lớp link chứa phương thức static  để tạo đường Link hiển thị các trang trong Vé Xe, Tuyến đi,....
+Khi gọi phương thức Link.ToCategory(“2”,”3”) bạn sẽ được đường 
+link như sau: 
+http://localhost:1522/Web/Catalog.aspx?CategoryID=2&Page=3 
+Khi gọi phương thức thứ hai Link.ToCategory(“2”) bạn sẽ được: 
+http://localhost:1522/Web/Catalog.aspx?CategoryID=2 
+
+
++Trang 68 xây dựng trang Admin
++ Cấu hình trang Login trong config
+ý 12. Trang 81
+5. Bây giờ bạn xem trang Admin/Default.aspx ở trình duyệt và ngay lập tức bị 
+chuyển qua trang Admin/Login.aspx vì chưa được chứng thực (do cấu hình 
+web.config ở bước trên 12 + 14)
+
+
++CSDL
+ Cắt ngắn dữ liệu khi xuất ra ngoài. trang 38
+ Chú ý trang 41 để phân trang
+ Code cơ sở dữ liệu Để phân trang (trang 97) Code trong DataAccess 98-99 Code trong trang web là 101
+
+
+
+ Javascript
+ Thêm sự kiện như bạn có chắc chắn muốn xóa hay....
+ Trang 91
+
+
+ +Tim kiems trên nhieu trang
+ trang 62
+
+
