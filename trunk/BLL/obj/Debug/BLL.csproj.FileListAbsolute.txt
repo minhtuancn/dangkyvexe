@@ -1,4 +1,0 @@
-I:\[PHAN TICH THIET KE HDT]\NHOM 11\DangKyVeXe\BLL\bin\Debug\BLL.dll
-I:\[PHAN TICH THIET KE HDT]\NHOM 11\DangKyVeXe\BLL\bin\Debug\BLL.pdb
-I:\[PHAN TICH THIET KE HDT]\NHOM 11\DangKyVeXe\BLL\obj\Debug\BLL.dll
-I:\[PHAN TICH THIET KE HDT]\NHOM 11\DangKyVeXe\BLL\obj\Debug\BLL.pdb
