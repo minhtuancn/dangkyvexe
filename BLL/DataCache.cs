@@ -1,44 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System;
 using System.Web;
-
-////////////////////////////////////////////////////////////////
-////// Lớp DataCache viet cac ham de su dung cho lop CBO///////
-//////////////////////////////////////////////////////////////
 
 namespace BLL
 {
     public class DataCache
     {
-        // Lấy được bộ nhớ đệm
-        public static object GetCache(string cachekey)
+        public static object GetCache(string cacheKey)
         {
-            return HttpRuntime.Cache[cachekey];
+            return HttpRuntime.Cache[cacheKey];
         }
-
-        public static void RemoveCache(string cachekey)
+        public static void RemoveCache(string cacheKey)
         {
-            System.Web.Caching.Cache objcache = HttpRuntime.Cache;
-            if (!Convert.ToBoolean(objcache[cachekey] == null))// neu ma khac null
-                objcache.Remove(cachekey);
+            System.Web.Caching.Cache objCache = HttpRuntime.Cache;
+            if (!Convert.ToBoolean(objCache[cacheKey] == null))
+                objCache.Remove(cacheKey);
         }
-        public static void SetCache(string cachekey, object objObject)
+        public static void SetCache(string cacheKey, object objObject)
         {
-            HttpRuntime.Cache.Insert(cachekey, objObject);
+            HttpRuntime.Cache.Insert(cacheKey, objObject);
         }
-        public static void SetCache(string cachekey, object objObject, DateTime AbsoluteExpiration)
+        public static void SetCache(string cacheKey, object objObject, DateTime AbsoluteExpiration)
         {
-            HttpRuntime.Cache.Insert(cachekey, objObject, null, AbsoluteExpiration, TimeSpan.Zero);
+            HttpRuntime.Cache.Insert(cacheKey, objObject, null, AbsoluteExpiration, TimeSpan.Zero);
         }
-        public static void SetCache(string cachekey, object objObject, int SlidingExpiration)
+        public static void SetCache(string cacheKey, object objObject, int SlidingExpiration)
         {
-            HttpRuntime.Cache.Insert(cachekey, objObject, null, DateTime.MaxValue, TimeSpan.FromSeconds((double)SlidingExpiration));
+            HttpRuntime.Cache.Insert(cacheKey, objObject, null, DateTime.MaxValue, TimeSpan.FromSeconds((double)SlidingExpiration));
         }
-        public static void SetCache(string cachekey, object objObject, System.Web.Caching.CacheDependency objDependency)
+        public static void SetCache(string cacheKey, object objObject, System.Web.Caching.CacheDependency objDependency)
         {
-            HttpRuntime.Cache.Insert(cachekey, objObject, objDependency);
+            HttpRuntime.Cache.Insert(cacheKey, objObject, objDependency);
         }
     }
 }
