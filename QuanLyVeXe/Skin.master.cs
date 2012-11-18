@@ -9,6 +9,6 @@ public partial class Skin : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        lbSoNguoiTruyCap.Text = "Số người online: " + Application["SoNguoiOnline"].ToString();
     }
 }
