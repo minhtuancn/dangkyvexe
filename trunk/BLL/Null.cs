@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 
 namespace BLL
@@ -74,7 +74,6 @@ namespace BLL
         }
 
         // convert an application encoded null value to a database null value ( used in DAL )
-        //chuyển đổi một ứng dụng mã hóa giá trị null cho một cơ sở dữ liệu giá trị null
         public static object GetNull(object objField, object objDBNull)
         {
             if (objField == null)
