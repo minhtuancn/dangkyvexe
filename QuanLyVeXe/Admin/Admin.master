@@ -17,7 +17,15 @@
 	<a href="../Default.aspx" style="font-weight:bold" target="_blank">HOME INDEX</a>
     <div id="sidebar">
     	<div id="header">
-        	<img src="tara/logo.png">
+            <!---->
+            <asp:LoginView ID="LoginView1" runat="server">
+                <LoggedInTemplate>
+                    <asp:LoginName ID="LoginName1" runat="server" FormatString="Hello: <b>{0}</b>" />
+                </LoggedInTemplate>
+            </asp:LoginView>
+            <asp:Label ID="Label1" runat="server" Text="/"></asp:Label>
+            <asp:LoginStatus ID="LoginStatus1" runat="server" /><!--Kiem tra trang thai và hien nut xuat ra-->
+        	<img src="tara/logo.png" style="margin-left: 10px;">
         </div> <!-- end of header -->
         
         <ul class="navigation">
