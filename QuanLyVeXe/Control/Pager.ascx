@@ -8,7 +8,9 @@
     <asp:HyperLink ID="HyperLinkPrevious" runat="server">Previous</asp:HyperLink>
     <asp:Repeater ID="RepeaterPages" runat="server">
         <ItemTemplate>
-            <asp:HyperLink ID="HyperLinkPages" runat="server" Text='<%#Eval("Page")%>' NavigateUrl='<%#Eval("Url")%>' CssClass='<%#Eval("Url")%>' ForeColor="#003300" Font-Size="Larger"></asp:HyperLink>
+            <asp:Label ID="Label2" runat="server" Text="["></asp:Label>
+                <asp:HyperLink ID="HyperLinkPages" runat="server" Text='<%#Eval("Page")%>' NavigateUrl='<%#Eval("Url")%>' CssClass='<%#Eval("Url")%>' ForeColor="#003300" Font-Size="Larger"></asp:HyperLink>
+            <asp:Label ID="Label3" runat="server" Text="]"></asp:Label>
         </ItemTemplate>
     </asp:Repeater>
     <asp:HyperLink ID="HyperLinkNext" runat="server">Next</asp:HyperLink>
