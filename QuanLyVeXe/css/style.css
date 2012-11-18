@@ -978,7 +978,7 @@ S
     background: #fefefe;
     border: #e1e1e1 1px solid;
     padding: 20px;
-    line-height: 140%;
+    line-height: 100%;
     position: relative;
 }
 
@@ -1086,4 +1086,14 @@ S
 }
 
 
-
+.baterror
+{
+    color:Red;
+ }
+ 
+.labelcreatecount
+{
+    font-weight: bold;
+    color: Black;
+    font-size: 15px;
+}
