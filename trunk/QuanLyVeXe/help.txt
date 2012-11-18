@@ -35,6 +35,25 @@ http://localhost:1522/Web/Catalog.aspx?CategoryID=2
 chuyển qua trang Admin/Login.aspx vì chưa được chứng thực (do cấu hình 
 web.config ở bước trên 12 + 14)
 
++Truong hop khong co o cai thang Admin ý. thi làm thế này
+, ấn vào thằng  aspnet_regsql  xong
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319 
+Password: lovebum91@
+
+ngocnhan - ngocnhan@
+lehaleha-lehaleha@
+----> Sử dụng ASP.NET Web Site Administration Tool – phần quản lý dữ liệu role & 
+membership của ASP.NET
++ CSDL Role & Membership ASP.NET--> Thang nay cung cap 3 application Membership, Profile, Roles
++ Muon thay doi Password khong bat buoc pai co pass dat biet thi ta lam nhu sau
+
+ 
+Tạo tài khoản: 145
+
+
+
+
 
 +CSDL
  Cắt ngắn dữ liệu khi xuất ra ngoài. trang 38
@@ -52,3 +71,49 @@ web.config ở bước trên 12 + 14)
  trang 62
 
 
+
+
+ +Kiểm tra textbox có Null hay không
+ RequiredFieldValidator
+
+
+
+ +Khong hieu tai sao khi de 
+  protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+       // btGuiLienHe.Click+=new EventHandler(btGuiLienHe_Click);
+    }
+thì captcha lại sai
+
+
+ if (txtPrice.Text != "") 
+        data.Price = Convert.ToDecimal(txtPrice.Text); 
+		data.CategoryID = Convert.ToInt32(ddlCategory.SelectedValue); 
+
+
+
+Tập tin Global.asax được dùng để:
+
+Khai báo và khởi tạo giá trị cho các biến Application, Session.
+Viết xử lý cho các sự kiện của 2 đối tượng Application và Session.
+
+
+Application_Start: Chỉ xảy ra một lần đầu tiên khi bất kỳ trang nào trong ứng dụng được gọi. Ứng dụng xây dựng tính năng đếm số người online, truy cập trong website.
+
+Session_Start: Xảy ra khi có một người dùng mới yêu cầu đến bất kỳ trang aspx của ứng dụng. Khi Session_Start xảy ra, một giá trị duy nhất (SessionID) sẽ được tạo cho người dùng, và giá trị này được sử dụng để quản lý người dùng trong quá trình làm việc với ứng d
+
+
+
+
++Bat error cac gia tri trog txtbox.
+
++	RequiredFieldValidator: Textbox co gia tri chua
+		SetFocusOnError: Sai con chuot se tro toi cho do
++	RegularExpressionValidator: Bat loi bang bieu thuc chinh quy
++	RangeValidator: Kiem tra trong khoang
++	ValidationSummary: Ca 2 cai cung sai
+
+
+
++Xoa 1 cai gi do khi qua so ngay da dinh trang 135
