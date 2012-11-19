@@ -27,9 +27,18 @@
                                 
 
                                 <table border="0" width="100%">
+                                    
                                     <tr>
                                             <p style="text-align:center;color: Red;font-weight:bold;"><asp:Label ID="Label4" runat="server" Text="Label">Góp ý và những ý tưởng vàng.</asp:Label></p>
                                             <p style="text-align:center;color: Red;font-weight:bold;"><asp:Label ID="Label7" runat="server" Text="Label">Xin Quý khách vui lòng để lại số điện thoại và địa chỉ.</asp:Label> </p>
+                                    
+                                    </tr>
+                                   
+                                    <tr>
+                                       
+                                        <td>
+                                            <asp:Label ID="lbMaLH" runat="server" Text=""></asp:Label>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="style1">  
@@ -37,7 +46,8 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtHoVaTen" runat="server" Width="247px"></asp:TextBox>
-                                        
+                                            
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorHoVaTen" runat="server" ErrorMessage="*" CssClass="baterror" ControlToValidate="txtHoVaTen" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                       <tr>
@@ -46,6 +56,7 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtDiaChi" runat="server" Width="247px"></asp:TextBox>
+                                              <asp:RequiredFieldValidator ID="RequiredFieldValidatorDiaChi" runat="server" ErrorMessage="*" CssClass="baterror" ControlToValidate="txtDiaChi" SetFocusOnError="true"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
                                       <tr>
@@ -54,6 +65,7 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtEmail" runat="server" Width="247px"></asp:TextBox>
+                                            <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ErrorMessage="*" ControlToValidate="txtEmail" CssClass="baterror" SetFocusOnError="true" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                         </td>
                                     </tr>
                                       <tr>
@@ -62,6 +74,7 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtDienThoai" runat="server" Width="247px"></asp:TextBox>
+                                            <asp:RegularExpressionValidator ID="RegularExpressionValidatorSoDT" runat="server" ErrorMessage="*" ControlToValidate="txtDienThoai" CssClass="baterror" SetFocusOnError="True" ValidationExpression="^0[1-9]{1}[0-9]{8,9}$"></asp:RegularExpressionValidator>
                                         </td>
                                     </tr>
                                      <tr>
@@ -70,26 +83,38 @@
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtTieuDe" runat="server" Width="247px"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorTieuDe" runat="server" 
+                                                ErrorMessage="*" SetFocusOnError="True" ControlToValidate="txtTieuDe" 
+                                                CssClass="baterror"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
 
                                       <tr>
                                         <td style="padding-bottom: 98px;  float: right;text-align: center; padding-right: 10px;"> 
                                             <asp:Label ID="Label6" runat="server" Text="Nội dung: "></asp:Label>
+                                            <asp:RequiredFieldValidator ID="RequiredFieldValidatorNoiDung" runat="server" ErrorMessage="*" ControlToValidate="txtNoiDung" CssClass="baterror" SetFocusOnError="True"></asp:RequiredFieldValidator>
                                         </td>
                                         <td>
                                             <asp:TextBox ID="txtNoiDung" runat="server" Width="420px" Height="127px" 
                                                 TextMode="MultiLine" Font-Size="Larger" ForeColor="#000066"></asp:TextBox>
+                                            
+                                            
                                         </td>
                                     </tr>
-
-                                     <tr>
-                                        <td>Nhập mã: </td>
+       
+                                    <tr>
+                                        <td class="style1">Nhập mã: </td>
                                         <td>
                                             <cc1:CaptchaControl ID="CaptchaControlLienHe" runat="server" CaptchaBackgroundNoise="Medium" CaptchaLineNoise="Low" />
                                             <asp:TextBox ID="txtCapcha" runat="server" Width="177px"></asp:TextBox>
                                             <asp:Label ID="lbResult" runat="server" Text="" Font-Bold="True" 
                                                 ForeColor="#FF3300"></asp:Label>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                         <td colspan="2" style="text-align:center; color: Red;">
+                                            <asp:Label ID="lbResultThongBao" runat="server" Text=""></asp:Label>
                                         </td>
                                     </tr>
 
