@@ -70,7 +70,19 @@ namespace DAL
             {
                 return new List<LienHe>();
             }
-            
+
+        }
+        //Select theo khoas chinh
+        public static LienHe LienHe_Single(string id)
+        {
+            try
+            {
+                return CBO.FillObject<LienHe>(DataProvider.Instance.ExecuteReader("LienHe_Signle", Convert.ToInt32(id)));
+            }
+            catch
+            {
+                return null;
+            }
         }
         public static List<LienHe> Pagings(string page, out int howManyPage)
         {
