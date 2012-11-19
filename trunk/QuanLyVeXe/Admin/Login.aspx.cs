@@ -11,4 +11,13 @@ public partial class Admin_Login : System.Web.UI.Page
     {
 
     }
+    protected override void OnInit(EventArgs e)
+    {
+        base.OnInit(e);
+        LoginUser.LoggedIn+=new EventHandler(LoginUser_LoggedIn);
+    }
+    protected void LoginUser_LoggedIn(object sender, EventArgs e)
+    {
+        Response.Redirect("~/Admin/Default.aspx");
+    }
 }
