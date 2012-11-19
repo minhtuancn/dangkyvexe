@@ -5,62 +5,84 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ĐĂNG NHẬP TÀI KHOẢN</title>
-    <link href="login/stylelog.css" rel="stylesheet" type="text/css" />
+    <link href="../css/login/stylelog.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="layer01_holder">
-      <div id="left"></div>
-      <div id="center"></div>
-      <div id="right"></div>
-    </div>
+        <div id="layer01_holder">
+          <div id="left"></div>
+          <div id="center"></div>
+          <div id="right"></div>
+        </div>
 
-    <div id="layer02_holder">
-      <div id="left"></div>
-      <div id="center"></div>
-      <div id="right"></div>
-    </div>
+        <div id="layer02_holder">
+          <div id="left"></div>
+          <div id="center"></div>
+          <div id="right"></div>
+        </div>
 
-    <div id="layer03_holder">
-      <div id="left"></div>
-      <div id="center">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td>LOGIN<br /><br /></td>
-      </tr>
-      <tr>
-           <td>
-             <asp:Label ID="Label1" runat="server" Text="Username: "></asp:Label>
-           </td>
-           <td>
-             <asp:TextBox ID="txtUserName" runat="server" Width="126px"></asp:TextBox>
-           </td>
-      </tr>
+        <div id="layer03_holder">
+          <div id="left"></div>
+          <div id="center">
+              <table width="110%" border="0" cellspacing="0" cellpadding="0">
 
-       <tr>
-           <td>
-             <asp:Label ID="Label2" runat="server" Text="Password:  "></asp:Label>
-           </td>
-           <td style="padding-top: 12px">
-             <asp:TextBox ID="txtPassword" runat="server" Width="126px" TextMode="Password"></asp:TextBox><br /><br />
-           </td>
-      </tr>
-      <tr>
-           <td></td>
-           <td style="padding-left: 56px;">
-               <asp:Button ID="btLogin" runat="server" Text="Log In" Width="69px"/> 
-           </td>
-      </tr>
-    </table>
-   </div>
-    <div id="right"></div>
+              <tr>
+               <td><asp:Login ID="LoginUser" runat="server" EnableViewState="false" RenderOuterTable="false" onloggedin="LoginUser_LoggedIn">
+                <LayoutTemplate>
+                    <asp:ValidationSummary ID="ValidationSummaryLoginUser" ValidationGroup="LoginUserValidationGroup" ShowSummary="false" runat="server" />
+                        <fieldset>
+                            <tr>
+                               <td> <asp:Label ID="UserNameLabel" runat="server"  AssociatedControlID="UserName">Username: </asp:Label></td>
+                               <td> <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="UserNameRequired" 
+                                    runat="server" ErrorMessage="*" 
+                                    ControlToValidate="UserName" CssClass="BatError" 
+                                    ToolTip="Username in request" ValidationGroup="LoginUserValidationGroup"></asp:RequiredFieldValidator> 
+                                </td>
+                           </tr>
+                        
+                            <tr>
+                                <td><asp:Label ID="lbPassword" AssociatedControlID="Password" runat="server" >Password : </asp:Label></td>
+                               <td>  <asp:TextBox ID="Password" TextMode="Password" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RegularExpressionValidatorPassword" 
+                                    runat="server" ErrorMessage="*" 
+                                    ControlToValidate="Password" CssClass="BatError" 
+                                    ToolTip="Password in request" ValidationGroup="LoginUserValidationGroup"></asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><asp:CheckBox ID="RememberMe" runat="server" />
+                                    <asp:Label ID="RememberMeLabel" runat="server" AssociatedControlID="RememberMe">Duy trì đăng nhập</asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><asp:Literal ID="LiteralText" runat="server"></asp:Literal></td>
+                            </tr>
+                            <br />
+                            <tr> 
+                                <td></td>
+                                <td style="padding-left: 50px;">  
+                                    <asp:Button ID="LoginButton" runat="server" Text="Đăng nhập" CommandName="Login" ValidationGroup="LoginUserValidationGroup" />
+                                </td>
+                            </tr>
+                        </fieldset>
+                </LayoutTemplate>            
+              </asp:Login>
+              </td>
+             </tr>
+              </table>
+         </div>
 
-    <div id="layer04_holder">
-      <div id="left"></div>
-      <div id="center"> </div>
-      <div id="right"></div>
-    </div>
+        
+        <div id="right"></div>
 
+        <div id="layer04_holder">
+          <div id="left"></div>
+          <div id="center"> </div>
+          <div id="right"></div>
+        </div>
+        </div>
     </form>
 </body>
 </html>
